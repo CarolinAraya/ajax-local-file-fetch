@@ -3,7 +3,9 @@ const container = document.getElementById("root")
 const userJson = "http://127.0.0.1:8887/users.json"
 
 fetch(userJson)
-.then(response => response.json())
+.then(response => {
+  return response.json();
+})
 .then(data => {
   console.log(data);
   renderUsers(data);
